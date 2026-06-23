@@ -15,13 +15,22 @@ function Weather() {
   if (!weather) return <div>Loading...</div>;
 
   return (
-    <div className="card">
+    <div style={cardStyle}>
       <h2>Weather</h2>
-      <p>{weather.name}</p>
-      <p>{weather.main.temp}°C</p>
+      <h3>{weather.name}</h3>
+      <p style={{ fontSize: "32px", margin: 0 }}>
+        {weather.main.temp}°C
+      </p>
       <p>{weather.weather[0].main}</p>
     </div>
   );
 }
+
+const cardStyle = {
+  background: "#1f1f1f",
+  padding: "20px",
+  borderRadius: "20px",
+  color: "white",
+};
 
 export default Weather;

@@ -27,11 +27,18 @@ function News() {
   if (!articles.length) return <p>Loading News...</p>;
 
   return (
-    <div className="card">
+    <div style={cardStyle}>
       <h2>News</h2>
       <p>{articles[index].title}</p>
     </div>
   );
 }
+
+const cardStyle = {
+  background: "#1f1f1f",
+  padding: "20px",
+  borderRadius: "20px",
+  color: "white",
+};
 
 export default News;
